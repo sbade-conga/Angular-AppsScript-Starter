@@ -4,7 +4,7 @@ const inject = require('gulp-inject-string');
 const clean = require('gulp-clean');
 
 
-const BASE_URL = 'https://YOURPROJECTURL.web.app';
+const BASE_URL = 'https://xauthor-for-gdocs.web.app';
 const PROJECT_NAME = 'Angular-AppsScript-Starter'
 const LOCAL_TOKEN = '';
 

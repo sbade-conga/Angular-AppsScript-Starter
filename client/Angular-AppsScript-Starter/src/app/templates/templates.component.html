@@ -1,0 +1,27 @@
+<div class="templateSection">
+	<mat-tab-group class="templateTabs" animationDuration="0ms" disablePagination="true">
+		<mat-tab label="Open Templates" class="openTemplatesTab">
+			<div class="searchBar">
+				<mat-form-field class="clauseNameText">
+					<input type="text" matInput id="clauseNameText" placeholder="Search by Template Name" [(ngModel)]="templateName" (keyup.enter)="onKeyUp($event)">
+				</mat-form-field>
+
+				<button mat-raised-button color="primary" (click)="getTemplates()">Search Templates</button>
+			</div>
+
+			<div class="pageSpinner" *ngIf="isPageLoading">
+				<mat-spinner></mat-spinner>
+			</div>
+
+			<div class="templateList">
+				<div *ngFor="let template of templates; let i = index" class="template" >
+					<p class="templateName">{{template.Name}}</p>
+					<p class="modifiedDate">Last Modified on: {{formatDate(template.ModifiedOn)}}</p>
+				</div>
+			</div>
+
+
+		</mat-tab>
+		<mat-tab label="Create New" class="createNewTab"> Create New Content </mat-tab>
+	</mat-tab-group>
+</div>

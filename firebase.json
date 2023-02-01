@@ -1,17 +1,23 @@
 {
-  "hosting": {
-    "headers": [ {
-          "source": "**/*.*",
-          "headers": [{
-            "key": "Access-Control-Allow-Origin",
-            "value": "*"
-          }]
-    }],
-    "public": "deploy/public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+	"hosting": {
+		"headers": [ {
+			"source": "**/*.*",
+			"headers": [
+				{
+					"key": "Access-Control-Allow-Origin",
+					"value": "*"
+				},
+				{
+					"key": "Cache-Control",
+					"value": "no-cache, no-store, must-revalidate, max-age=0"
+				}
+			]
+		}],
+		"public": "deploy/public",
+		"ignore": [
+			"firebase.json",
+			"**/.*",
+			"**/node_modules/**"
+		]
+	}
 }

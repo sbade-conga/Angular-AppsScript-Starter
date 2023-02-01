@@ -1,0 +1,43 @@
+<div class="home">
+	<div class="header">
+		<button mat-icon-button class="menuBtn" [matMenuTriggerFor]="menu" aria-label="menu">
+			<mat-icon>menu</mat-icon>
+		</button>
+		<span>{{pageHeader}}</span>
+	</div>
+
+	<mat-menu #menu="matMenu">
+		<button mat-menu-item (click)="pageHeader = 'Welcome!'">
+			<mat-icon>home</mat-icon>
+			<span>Home</span>
+		</button>
+		<button mat-menu-item (click)="openContracts()">
+			<mat-icon>description</mat-icon>
+			<span>Contracts</span>
+		</button>
+		<button mat-menu-item (click)="openTemplates()">
+			<mat-icon>post_add</mat-icon>
+			<span>Templates</span>
+		</button>
+		<button mat-menu-item (click)="logoutUser()">
+			<mat-icon>logout</mat-icon>
+			<span>Logout</span>
+		</button>
+	</mat-menu>
+
+	<app-contracts *ngIf="pageHeader == 'Contracts'"></app-contracts>
+	<app-templates *ngIf="pageHeader == 'Templates'"></app-templates>
+	<app-logout *ngIf="pageHeader == 'Logout'"></app-logout>
+
+	<router-outlet></router-outlet>
+
+	<div class="content" *ngIf="pageHeader == 'Welcome!'">
+		<div class="logo">
+			<img src="assets/images/conga_logo.png" alt="X-Author Apttus logo" width="90" height="90">
+		</div>
+		<h2>X-Author™ for Contracts</h2>
+		<p>X-Author for Contracts add-in is patented technology to help you manage and streamline the entire contract process right within Microsoft Word.</p>
+		<p>To learn more, please click here.</p>
+	</div>
+
+</div>

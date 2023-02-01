@@ -1,0 +1,28 @@
+<div class="contractSection">
+	<mat-tab-group class="contractTabs" animationDuration="0ms" disablePagination="true">
+		<mat-tab label="Start" class="startTab">
+			<div class="searchBar">
+				<mat-form-field class="clauseNameText">
+					<input type="text" matInput id="clauseNameText" placeholder="Search by Contract Name" [(ngModel)]="contractName" (keyup.enter)="onKeyUp($event)">
+				</mat-form-field>
+
+				<button mat-raised-button color="primary" (click)="getContracts()">Search Contracts</button>
+				<button mat-raised-button color="primary" (click)="resize()">Resize</button>
+			</div>
+
+			<div class="pageSpinner" *ngIf="isPageLoading">
+				<mat-spinner></mat-spinner>
+			</div>
+
+			<div class="contractList">
+				<div *ngFor="let contract of contracts; let i = index" class="contract" >
+					<p class="contractName">{{contract.Name}}</p>
+					<p class="modifiedDate">Last Modified on: {{formatDate(contract.ModifiedOn)}}</p>
+				</div>
+			</div>
+
+		</mat-tab>
+		<mat-tab label="Work" class="workTab"> Work Tab Content </mat-tab>
+		<mat-tab label="Finish" class="finishTab"> Finish Tab Content </mat-tab>
+	</mat-tab-group>
+</div>

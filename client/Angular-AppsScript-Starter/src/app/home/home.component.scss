@@ -1,0 +1,56 @@
+.home {
+	height: 100%;
+
+	.header {
+		background: #16325c;
+		color: white;
+		font-family: Roboto,"Helvetica Neue",sans-serif;
+		font-weight: 500;
+		display: flex;
+		justify-content: unset;
+		align-items: center;
+
+		.menuBtn {
+			color: white;
+			background: #16325c;
+		}
+	}
+
+	.tabs,.mat-tab-group {
+		font-size: 16px;
+		font-weight: bold;
+
+		.mat-tab-label {
+			opacity: 1;
+			background-color: #fafafa;
+			border-bottom: 2px solid #dddbda;
+		}
+
+		.mat-tab-label-active {
+			background-color: white;
+			border-bottom: none;
+		}
+
+		.mat-tab-body-wrapper {
+			padding: 10px 25px;
+		}
+	}
+
+	.content {
+		height: 100%;
+		overflow: auto;
+		box-sizing: border-box;
+
+		.logo {
+			text-align: center;
+		}
+		display: flex;
+		flex-direction: column;
+		padding: 60px;
+		text-align: justify;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}

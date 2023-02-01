@@ -1,19 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>AngularAppsScriptStarter</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script>  
-    const hash = '<?= route?>';  
-    if(!hash.includes('route')){  
-      window.location.hash = hash;  
-    }  
-  </script>
+	<meta charset="utf-8">
+	<title>XAuthor for Google Docs</title>
+	<base href="/">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+	<script src="assets/scripts/jquery.min.js"></script>
+	<!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+	<!-- <link rel="stylesheet" href="https://kit.fontawesome.com/f354bec566.css" crossorigin="anonymous"> -->
+	<!-- <link rel="stylesheet" href="assets/styles/font-awesome.css" /> -->
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500" rel="stylesheet">
+	<!-- <link href="node_modules/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet" /> -->
+	<!-- <link rel="stylesheet" href="assets/styles/indigo-pink.css" /> -->
+	<!-- <script src="https://kit.fontawesome.com/f354bec566.js" crossorigin="anonymous"></script> -->
+
+	<script>  
+		const hash = '<?= route?>';  
+		if(!hash.includes('route')){  
+			window.location.hash = hash;  
+		}
+	</script>
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
-  <app-root></app-root>
+<body style="margin:0;">
+	<!-- <div>
+		<h1>XAuthor for Google Docs</h1>
+		<form>
+			<input type="button" id="focusBtn" value="Switch Focus" onclick="google.script.host.editor.focus()">
+			<input type="button" id="generateBtn" value="Generate" onclick="generate()">
+		</form>
+	</div> -->
+
+	<!-- <div style="width:100%; height:100%;">
+		<div style="width:100%; height:100%;">
+			<iframe src="https://docs.google.com/document/d/1t-K0HV4nuHkmHmTIU3IJqO4FoQGtPyr8C9gItA6OWq8/edit?addon_dry_run=AAnXSK_xXogzRqFrb5rxo6Gceqfwb6ta7vYPwI4sLKSFtrh38HNzx29vDOZHeN17NJVIzqqrHDr8XAT6DqvsODzVIp4TobaeCsF4RJUQLwLzTzq4qqGn_fl0ahkd3_EDY3anA7sAcuxP"  style="border:0; height: 99%; width:100%;"></iframe>
+		</div>
+		<div style="position:fixed; top:100px; right:56px; border:1px solid #dadce0; background:white; width:300px; box-sizing: border-box; height: calc(100vh - 100px);">
+			<app-root></app-root>
+		</div>
+	</div> -->
+
+
+	<app-root></app-root>
+
+	<script>
+		function generate() {
+			console.log("Clicked Generate Button");
+			google.script.run.withSuccessHandler(onClose).generateDo();
+		}
+
+		function onClose() {
+			console.log("Success");
+			google.script.host.close();
+		}
+	</script>
 </body>
 </html>
