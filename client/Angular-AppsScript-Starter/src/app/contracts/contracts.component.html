@@ -6,8 +6,10 @@
 					<input type="text" matInput id="clauseNameText" placeholder="Search by Contract Name" [(ngModel)]="contractName" (keyup.enter)="onKeyUp($event)">
 				</mat-form-field>
 
-				<button mat-raised-button color="primary" (click)="getContracts()">Search Contracts</button>
-				<button mat-raised-button color="primary" (click)="resize()">Resize</button>
+				<!-- <button mat-raised-button color="primary" (click)="getContracts()">Search Contracts</button> -->
+				<button mat-icon-button color="primary" aria-label="Search" (click)="getContracts()">
+					<mat-icon>search</mat-icon>
+				</button>
 			</div>
 
 			<div class="pageSpinner" *ngIf="isPageLoading">

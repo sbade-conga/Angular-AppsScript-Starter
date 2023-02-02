@@ -2,11 +2,14 @@
 	<mat-tab-group class="templateTabs" animationDuration="0ms" disablePagination="true">
 		<mat-tab label="Open Templates" class="openTemplatesTab">
 			<div class="searchBar">
-				<mat-form-field class="clauseNameText">
-					<input type="text" matInput id="clauseNameText" placeholder="Search by Template Name" [(ngModel)]="templateName" (keyup.enter)="onKeyUp($event)">
+				<mat-form-field class="templateNameText">
+					<input type="text" matInput id="templateNameText" placeholder="Search by Template Name" [(ngModel)]="templateName" (keyup.enter)="onKeyUp($event)">
 				</mat-form-field>
 
-				<button mat-raised-button color="primary" (click)="getTemplates()">Search Templates</button>
+				<!-- <button mat-raised-button color="primary" (click)="getTemplates()">Search Templates</button> -->
+				<button mat-icon-button color="primary" aria-label="Search" (click)="getTemplates()">
+					<mat-icon>search</mat-icon>
+				</button>
 			</div>
 
 			<div class="pageSpinner" *ngIf="isPageLoading">

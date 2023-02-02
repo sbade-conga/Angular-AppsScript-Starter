@@ -1,24 +1,24 @@
 {
-  "name": "angular_appsscript_starter",
-  "version": "1.0.0",
-  "description": "A starter project to bootstrap Angular Apps in Google Apps Script",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Spencer Easton",
-  "license": "NONE",
-  "devDependencies": {
-    "@angular/cli": "^11.2.1",
-    "@google/clasp": "^2.3.0",
-    "firebase-tools": "^9.4.0",
-    "gulp": "^4.0.2",
-    "gulp-clean": "^0.4.0",
-    "gulp-inject": "^5.0.5",
-    "gulp-inject-string": "^1.1.2",
-    "gulp-rename": "^2.0.0"
-  },
-  "dependencies": {
-    "firebase": "^9.15.0"
-  }
+	"name": "angular_appsscript_starter",
+	"version": "1.0.0",
+	"description": "A starter project to bootstrap Angular Apps in Google Apps Script",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Spencer Easton",
+	"license": "NONE",
+	"devDependencies": {
+		"@angular/cli": "^11.2.1",
+		"@google/clasp": "^2.3.0",
+		"firebase-tools": "^9.4.0",
+		"gulp": "^4.0.2",
+		"gulp-clean": "^0.4.0",
+		"gulp-inject": "^5.0.5",
+		"gulp-inject-string": "^1.1.2",
+		"gulp-rename": "^2.0.0"
+	},
+	"dependencies": {
+		"firebase": "^9.15.0"
+	}
 }

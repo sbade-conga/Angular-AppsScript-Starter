@@ -41,14 +41,15 @@ export class TemplatesComponent implements OnInit {
 		};
 
 		let headers = new HttpHeaders();
-		headers = headers.append('AuthToken', '00D2h00000010WT!AQMAQIEPHhkrKsy905zGQ8qRrS7wBZbDF.Fx3Csdc24g3z3zwVMw71IiEEqNL4m6joiHhMs4YQeOko1CSwl8opVecAlEuajm');
+		headers = headers.append('AuthToken', '00D2h00000010WT!AQMAQC3ZS4kVHGyVMktziWwcWP0j9VBj3MrRbKeTS7QUpGw2K_ZIYzt5_zkl41L6aItEXvTls5BIAIBzjaNJZdP1vwZjqN8r');
 		headers = headers.append('InstanceUrl', 'https://keyurv1932--xa2functin.sandbox.my.salesforce.com');
-		headers = headers.append('Origin', 'https://xajs-qa2.congacloud.io');
+		// headers = headers.append('Origin', 'https://xajs-qa2.congacloud.io');
 		headers = headers.append('OrgType', 'CLM');
 		headers = headers.append('Accept', 'application/json');
 		headers = headers.append('Content-Type', 'application/json');
 		headers = headers.append('cache', 'false');
 		headers = headers.append('IdeAPI', 'CCI');
+		// headers = headers.append('Access-Control-Allow-Origin', '*');
 		headers = headers.append('Cache-Control', 'no-cache, no-store, must-revalidate, post-check = 0, pre-check = 0');
 		
 		this.http.post<any>('https://xajs-qa2.congacloud.io/api/xajs/v1/xAuthor/Template/FindTemplates', payload, { headers }).subscribe(data => {

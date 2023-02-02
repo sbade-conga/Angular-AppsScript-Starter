@@ -48,7 +48,7 @@ function processClientOtherFiles(cb) {
 function buildClientLoadPage(cb) {
     src(`./client/${PROJECT_NAME}/dist/${PROJECT_NAME}/index.html`)
         .pipe(inject.after('<base href="/">', '<base target="_top">'))
-        .pipe(inject.after('<link rel="stylesheet" href="', BASE_URL + '/assets/scripts/'))
+        .pipe(inject.afterEach('<link rel="stylesheet" href="', BASE_URL + '/assets/scripts/'))
         .pipe(inject.afterEach('<script src="', BASE_URL + '/assets/scripts/'))
         .pipe(inject.afterEach('</script>', '\n'))
         .pipe(dest('deploy/build/client/'));

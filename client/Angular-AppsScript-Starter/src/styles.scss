@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 // @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 // @import "@angular/material/prebuilt-themes/indigo-pink.css";
-// @import 'app/library/indigo-pink.css';
+// @import 'assets/styles/font-awesome.css';
+// @import 'assets/styles/indigo-pink.css';
+// @import "~bootstrap/dist/css/bootstrap.min.css";
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 html, body {
 	height: 100%;
@@ -10,4 +13,35 @@ html, body {
 body { 
 	margin: 0; 
 	font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.primary-btn {
+	width: auto;
+	height: 32px;
+	border-radius: 4px;
+	background-color: #0070d2 !important;
+	box-shadow: 0 2px 2px 0 rgb(37 49 66 / 28%);
+	color: #fff;
+	border: 1px solid #0070d2;
+	font-size: 13px;
+	min-width: 70px;
+	cursor: pointer;
+	line-height: normal;
+}
+
+.secondary-btn {
+	display: inline-block;
+	height: 32px;
+	text-decoration: none;
+	color: #3ba1d9;
+	background-color: #fff;
+	border: solid 1px gray;
+	border-radius: 3px;
+	line-height: normal !important;
+	cursor: pointer;
+	border-width: .5px;
 }

@@ -32,4 +32,12 @@ export class HomeComponent implements OnInit {
 		this.router.navigate(['/logout']);
 	}
 
+	public login() {
+
+	}
+
+	public loginToSandbox() {
+		
+	}
+
 }

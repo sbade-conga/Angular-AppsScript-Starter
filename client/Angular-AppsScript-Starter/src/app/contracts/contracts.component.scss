@@ -23,6 +23,10 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+
+			.clauseNameText {
+				width: 100%;
+			}
 		}
 
 		.pageSpinner {
@@ -35,13 +39,14 @@
 		}
 
 		.contractList {
-			padding: 0 20px;
+			padding: 0;
 
 			.contract {
 				background-color: #f7f7f7;
 				border: 1px solid #dddbda;
 				border-radius: 4px;
 				padding: 10px;
+				margin-bottom: 5px;
 
 				p {
 					margin: 5px 0;

@@ -35,9 +35,22 @@
 		<div class="logo">
 			<img src="assets/images/conga_logo.png" alt="X-Author Apttus logo" width="90" height="90">
 		</div>
-		<h2>X-Author™ for Contracts</h2>
+		<h3>X-Author™ for Contracts</h3>
 		<p>X-Author for Contracts add-in is patented technology to help you manage and streamline the entire contract process right within Microsoft Word.</p>
-		<p>To learn more, please click here.</p>
-	</div>
+		<p>To learn more, please
+			<a href="https://apttus.com/solutions/contract-lifecycle-management/"> click here. </a>
+		</p>
+		<button mat-raised-button color="primary" class="primary-btn" (click)="login()">Login</button>
 
+		<div class="testing">
+			<p>For Testing</p>
+			<button mat-raised-button class="secondary-btn" (click)="loginToSandbox()">Log In to Sandbox</button>
+		</div>
+
+		<div class="copyrights">
+			<mat-icon class="mat-icon notranslate material-icons mat-icon-no-color" id="copyrightIcon" role="img" aria-hidden="true">copyright</mat-icon>
+			<span>2022 Conga &nbsp;| &nbsp;</span>
+			<a id="aboutXAuthorLink" target="_blank" href="https://conga.com/products/manage-contracts">About X-Author</a>
+		</div>
+	</div>
 </div>
